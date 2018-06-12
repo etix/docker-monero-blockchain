@@ -1,7 +1,7 @@
 FROM ubuntu:latest
 LABEL maintainer="etix@l0cal.com" description="Monero blockchain node (with GPG verified binary)"
 
-RUN apt-get update && apt-get install -y curl bzip2 gawk git gnupg
+RUN apt-get update && apt-get install -y curl bzip2 gawk git gnupg libpcsclite-dev
 
 WORKDIR /root
 
