@@ -16,10 +16,10 @@ RUN git clone --depth=1 https://github.com/monero-project/monero.git && \
 
 RUN curl https://downloads.getmonero.org/cli/`cat binary.txt` -O && \
   echo `cat sha256.txt` '' `cat binary.txt` | sha256sum -c - && \
-  tar -xjvf *.tar.bz2 && \
-  cp ./monero-v*/monerod . && \
+  tar -xvf *.tar.bz2 && \
+  cp ./monero-x86_64-linux-gnu/monerod . && \
   rm *.tar.bz2 && \
-  rm -r monero-v*
+  rm -r monero-x86_64-linux-gnu
 
 VOLUME /root/.bitmonero
 
